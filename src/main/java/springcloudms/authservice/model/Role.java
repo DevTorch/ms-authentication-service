@@ -1,5 +1,6 @@
 package springcloudms.authservice.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -39,6 +40,7 @@ public class Role {
     @Setter
     @Getter
     @ManyToOne(optional = false)
+    @JsonBackReference
     private Account accountId;
 
 }
